@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 
 const PostSchema = new Schema({
-    user_id: {
+    userId: {
 	type: Schema.ObjectId
     },
     title: {

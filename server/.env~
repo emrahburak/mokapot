@@ -1,0 +1,1 @@
+DB_URI = mongodb+srv://pragma:d3vr1k3b1r@nodeblog.5idq6.mongodb.net/mokapot_testDB?retryWrites=true&w=majority

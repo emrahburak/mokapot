@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --ext js,graphl --exec npm run babel-node -- ./app.js",
+    "dev": "nodemon --ext js,graphql --exec npm run babel-node -- ./app.js",
     "babel-node": "babel-node --presets='@babel/preset-env'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +17,8 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "graphql": "^15.5.0",
-    "mongoose": "^5.11.13"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.17"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

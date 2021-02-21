@@ -5,7 +5,7 @@ const Query = {
       },
 
       users: async(parent,args,{User})=> {
-	  console.log("users unit on work");
+//	  console.log("users unit on work");
 	  return await User.find({}).sort({'createdAt':'desc'});
       },
 

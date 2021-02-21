@@ -1,0 +1,13 @@
+module.exports = {
+    createPost: async(parent, {data:{userId, text,title}},{Post}) => {
+
+	    const post = await new Post({
+		userId,
+		title,
+		text
+	    }).save()
+
+	    return post;
+
+    }
+}

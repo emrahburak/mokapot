@@ -1,10 +1,10 @@
 const user = require('./user.mutation');
-
+const post = require('./post.mutation');
 
 
 const Mutation = {
-    ...user
-
+    ...user,
+    ...post
 };
 
 module.exports = Mutation;
