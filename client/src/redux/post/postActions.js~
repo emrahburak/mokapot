@@ -1,9 +1,0 @@
-export {GET_POSTS} from './postTypes';
-
-
-export const getPosts = ()=>{
-    return {
-	type:GET_POSTS,
-	info:'initial post Action'
-    }
-}
