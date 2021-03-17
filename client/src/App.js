@@ -1,9 +1,5 @@
-import {Fragment} from 'react';
+import React,{Fragment} from 'react';
 import {Container} from 'reactstrap';
-import Navi from '../navi/Navi';
-import Home from '../pages/Home';
-import Login from '../pages/account/Login';
-import Join from '../pages/account/Join';
 import {
     BrowserRouter as Router,
     Route,
@@ -11,10 +7,20 @@ import {
     Redirect
 } from 'react-router-dom';
 
+
+//components
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+//pages
+import Home from './pages/Homepage';
+import Login from './pages/Login';
+import Join from './pages/Join';
+
 const Root = ()=>(
 	<Router>
 	<>
-	<Navi/>
+	<Header/>
 	 <hr />
 	<Switch>
 	<Route path="/" exact component={Home} />
@@ -31,6 +37,7 @@ function App() {
     <div className="App">
 	  <Container>
 	  <Root/>
+	  <Footer/>
 	  </Container>
 
     </div>

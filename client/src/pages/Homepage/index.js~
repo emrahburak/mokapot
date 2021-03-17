@@ -1,5 +1,5 @@
 import react,{Fragment} from 'react';
-import PostList from '../post/PostList';
+import PostContainer from '../post/PostContainer';
 import { Row,Col} from 'reactstrap';
 
 export default class Home extends react.Component{
@@ -9,16 +9,12 @@ export default class Home extends react.Component{
 		<Row>
 		<Col xs="12">
 		<p>Home </p>
-		<PostList/>
+		<PostContainer/>
 		</Col>
 
 	       </Row>
 
 	    </>
-
-
-
 	)
     }
-
 }

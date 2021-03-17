@@ -11,10 +11,10 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText
 } from 'reactstrap';
+import {NavLink as NavLinkRouter} from 'react-router-dom';
 
-const Example = (props) => {
+const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -22,15 +22,17 @@ const Example = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+	  <NavLinkRouter to="/" exact >
+        <NavbarBrand>MokaPot</NavbarBrand>
+	  </NavLinkRouter>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="">Components</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="">GitHub</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -50,12 +52,17 @@ const Example = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
-        </Collapse>
+	  <NavLink>
+	  <NavLinkRouter to="/login">Login</NavLinkRouter>
+	  </NavLink>
+	  <NavLink>
+	  <NavLinkRouter to="/join">Join</NavLinkRouter>
+	  </NavLink>
+	  </Collapse>
       </Navbar>
     </div>
   );
 }
 
-export default Example;
+export default Header;
 
